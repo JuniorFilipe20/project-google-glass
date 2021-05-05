@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre o Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById("cQtd").value);
+        tot = qtd * 1500;
+        document.getElementById("cTot").value = tot;
+    }
+</script>
+</head>
+
+<body>
+    <div id="interface">
+
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google existe</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/contato.png"/>
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="disc">
+                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="corpo-full">
+
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>     
+                        <h3>Fale Conosco > Multimídia</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Júnior Filipe</h2>
+                        <h3 class="direita">Atualizado em 31/Março/2021</h3>
+                    </hgroup>
+                </header>
+
+                <form method="POST" id="fContato" action="mailto:juniorfilipe17@gmail.com" oninput="calc_total();">
+                    <fieldset id="utilizador"><legend>Identificação do Utilizador</legend>
+                            <p><label for="cNome">Nome:</label>
+                            <input type="text" name="tNome" id="cNome" size="20" maxlength="20" placeholder="Nome Completo"></p>
+                            <p><label for="cSenha">Senha:</label>
+                            <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+                            <p><label for="cMail">E-mail:</label>
+                            <input type="email" name="tMail" id="cMail" size="20" maxlength="40"></p>
+                            <fieldset id="sexo"><legend>Sexo</legend>
+                                <input type="radio" name="tSexo" id="cMasc" checked/> <label for="cMasc">Masculino</label><br/>
+                                <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
+                            </fieldset>
+                            <p><label for="cNasc">Data de Nascimento:</label>
+                            <input type="date" name="tNasc" id="cNasc"></p>
+                    </fieldset>
+    
+                    <fieldset id="endereco">
+                        <legend>Endereço do Utilizador</legend>
+                            <p><label for="cRua">Logradouro:</label>
+                            <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav..."></p>
+                            <p><label for="cNum">Número:</label>
+                            <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+                            <p><label for="cIlh">Ilha:</label>
+                            <select name="tIlh" id="cIlh">
+                                <optgroup label="Barlavento">
+                                    <option value="SA">Santo Antão</option>
+                                    <option value="SV" selected>São Vicente</option>                                
+                                    <option value="SL">Santa Luzia</option>
+                                    <option value="SN">São Nicolau</option>
+                                    <option value="SAL">Sal</option>
+                                    <option value="BV">Boavista</option>
+                                </optgroup>
+                                <optgroup label="Sotavento">
+                                    <option value="MA">Maio</option>
+                                    <option value="ST">Santiago</option>
+                                    <option value="FG">Fogo</option>
+                                    <option value="BR">Brava</option>
+                                </optgroup>
+                            </select></p>
+                            <p><label for="cCid">Cidade:</label>
+                            <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+                            <datalist id="cidades">
+                                <option value="Praia"></option>
+                                <option value="Mindelo"></option>
+                                <option value="Mosteiros"></option>
+                                <option value="São Filipe"></option>
+                                <option value="Porto Novo"></option>
+                                <option value="Pedra Badejo"></option>
+                                <option value="Espargos"></option>
+                                <option value="Tarrafal"></option>
+                                <option value="Ribeira Brava"></option>
+                                <option value="Calheta de São Miguel"></option>
+                                <option value="Vila do Maio"></option>
+                                <option value="Ribeira Grande"></option>
+                                <option value="Cidade Velha"></option>
+                                <option value="Sal Rei"></option>
+                                <option value="São Domingos"></option>
+                                <option value="Pombas"></option>
+                                <option value="Nova Sintra"></option>
+                                <option value="Ponta do Sol"></option>
+                                <option value="Santa Maria"></option>
+                                <option value="Mosteiros"></option>
+                                <option value="Cova Figueira"></option>
+                                <option value="Tarrafal de São Nicolau"></option>
+                            </datalist>
+                    </fieldset>
+    
+                    <fieldset id="mensagem"><legend>Mensagem do Utilizador</legend>
+                        <p><label for="cUrg">Grau de Urgência:</label>
+                        Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx</p>
+                        <p><label for="cMsg">Mensagem:</label>
+                        <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p></p>        
+                    </fieldset>
+    
+                    <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                        <p><input type="checkbox" name="tPed" id="cPed" checked>
+                            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
+                        <p><label for="cCor">Cor:</label>
+                        <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+                        <p><label for="cQtd">Quantidade:</label>
+                        <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+                        <p><label for="cTot">Preço Total: R$</label>
+                        <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+                    </fieldset>
+
+                    <input type="image" name="tEnviar" src="_imagens/botao-enviar.png"/>
+    
+                </form>
+
+            </article>
+        </section>
+
+        <footer id="rodape">
+            <p>Copyright 2021 - by Júnior Filipe <br/>
+            <a href="https://web.facebook.com/jayjayfilipe20/" target="_blank">Facebook</a> | 
+            <a href="https://www.instagram.com/jr.filipe.20/" target="_blank">Instagram </a></p>
+        </footer>
+    </div>
+</body>
+</html>

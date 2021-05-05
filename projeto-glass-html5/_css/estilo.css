@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Titillium+Web");  /* Utilizando fontes públicas do Google, no site "google.com/fonts" */
+@font-face {  /* Que perite utilizar uma fonte personalizade, que tenha no computador */
+    font-family: "FonteLogo";
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba(0, 0, 0, 1);
+}
+
+div#interface {
+    width: 900px;  /* Para fazer com que com que todo o conteúdo da interface fique delimitado à 900 pixels */
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    padding: 10px;  /* Para que o texto tenha um espaçamento em relação à margem, assim que não fique junto a ela. Sendo: padding: 10px; igual a padding: 10px 10px 10px 10px; */
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {  /* Alterando a posição da imagem dentro header cabeçalho */
+    position: absolute;  /* Dando uma posição absoluta */
+    left: 780px;
+    top: 70px;
+}
+
+header#cabecalho {  /* Para configurar todos os objetos dentro do cabeçalho */
+    border-bottom: 1px #606060 solid;  /* Configurando a borda */
+    height: 150px;  /* Altura */
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;  /*  Para adicionar uma imagem como background, sendo que o ".." retrocede uma pasta, o "no-repeat" faz com que imagem não se repita, ou seja que apareça apenas uma vez e os px correspondem ao seu posicionamento */
+}
+
+header#cabecalho h1 {  /* Configurando o título do cabeçalho */
+    font-family: "FonteLogo", sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {  /* Configurando o subtítulo do cabeçalho */
+    font-family: "Titillium Web", sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+/* Formatação de imagens com legendas */
+
+figure.foto-legenda {   /* borda */
+    position: relative;  /* Para que a legenda fique dentro da imagem */
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;  /* sombra */
+}
+
+figure.foto-legenda img { /* Para fazer com que a imagem fique ajustado à borda */
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {  /* Em ralação à legenda */
+    opacity: 0;
+    position: absolute;  /* Vai ter uma posição absoluta dentro da borda */
+    top: 0px;  /* Para ficar localizado no topo */
+    background-color:  rgba(0, 0, 0, 0.4);  /* Para criar uma camada transparente */
+    color: white;
+    width: 100%;     /* Para que a borda ocupe todo o espaço na imagem */
+    height: 100%;
+    padding: 10px;   /* Para criar um espaço na legenda */
+    box-sizing: border-box;   /* Para criar um box dentro da borda */
+    transition: opacity 1s;   /* O tempo que vai levar a exibir a imagem quando passar o mouse em cima, no caso 1 segundo */
+}
+
+figure.foto-legenda:hover figcaption {  /* Para esconder a legenda temporáriamente */
+    opacity: 1;  /* Assim quando passar o mouse em cima da imagem a legenda aparece com opacidade 1 (100%) */
+}
+
+/* Formatação do Menu */
+
+nav#menu { /* O "#" corresponde ao id do menu */
+    display: block; /* Para fazer com que o menu seja em forma de um bloco */
+}
+
+nav#menu ul { /* Para remover a formatação "ul" no menu */
+    list-style: none;
+    text-transform: uppercase; /* Para transformar o texto do menu em letras maiúsculas */
+    position: absolute; /* Para fazer com que o menu fique em um lugar definido na tela */
+    top: -20px;
+    left: 400px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: #dddddd; /* Para fazer com que um bloco seja exibido em uma única linha */
+    padding: 10px; /* Espaço de 10 pixels dentro da caixa que contém o objeto */
+    margin: 2px; /* Espaço de 2 pixels fora da caixa que contém o objeto */
+    transition: background-color 1s;  /* Tempo que vai transitar a mudança de cor nos elementos, definido no ":hover" abaixo */
+}
+
+nav#menu li:hover {  /* :hover é o efeito que vai ser aplicado quando passar o mouse por cima */
+    background-color: #606060;  /* Quando passar o mouse por cima dos elementos do menu, vão ter esta cor */
+}
+
+nav#menu h1 {  /* Para esconder o texto "Menu Principal" */
+    display: none;
+}
+
+nav#menu a {  /* Todo o nav que no menu que tem uma âncora "a" vai ter: */
+    color: #000000;  /* cor preta */
+    text-decoration: none;  /* Para tirar o sublinhado */
+}
+
+nav#menu a:hover {  /* Para fazer com que o link mude de cor quando estiver ativo sobre o mouse */
+    color: #ffffff;
+    text-decoration: underline  /* Quando passar o mouse por cima, o menu fica sublinhado */
+}
+
+section#corpo {  /* Configurando a sessão corpo */
+    display: block;
+    width: 500px;
+    float: left;  /* Para fazê-lo flutuar pelo lado esquerdo */
+    border-right: 1px solid #606060;  /*Para fazer uma linha na borda do section, no lado direito dele */
+    padding-right: 15px;
+}
+
+article#noticia-principal h2 {  /* Formatando o artigo noticia-principal */
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: "FonteLogo", sans-serif;
+    font-size: 20px;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita {  /*Formatando tudo o que tiver a classe "direita" */
+    text-align: right;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13px;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+}
+
+table#tabelaspec {  /* Configurando a borda da tabela */
+    border: 1px solid #606060;
+    border-spacing: 0px;  /* Para que não haja espaço entre as células da tabela */
+    margin-left: auto;     /* Para cetralizar a tabela */
+    margin-right: auto;
+}
+
+table#tabelaspec td {  /* Configurando as bordas internas da tabela */
+    border: 1px solid #606060;
+    padding: 10px;  /* Para ter mais espaço interno na tabela entre as celulas */
+    text-align: center;  /* Alinhando os textos da tabela ao centro */
+    vertical-align: middle;  /* Alinhamento vertical no meio */
+}
+
+table#tabelaspec td.ce {  /* Formatando as classes "ce" da tabela, sendo o "." utilizado para identificar uma classe (. no caso de classe e # no caso de id) */
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;  /* Em cima (table#tabelaspec td) tem um alinhamento vertical no meio e agora foi definido como sendo no topo, então este, como sendo de uma classe, vai sobrepor ao anterior */
+    font-weight: bold;  /* Texto a negrito */
+}
+
+table#tablelaspec td.cd {  /* Formatando as classes "cd" da tabela */
+    background-color: #cecece;
+}
+
+table#tabelaspec caption {  /* Formatando o título da tebela */
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table#tabelaspec caption span {  /* Configurando o span */
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {  /* Configurando o conteúdo lateral */
+    display: block;
+    width: 350px;
+    float: right;  /* Para fazê-lo flutuar pelo lado direito */
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1 {  /* Formatando os tílulos (h1) no conteúdo lateral */
+    font-family: "FonteLogo", sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {  /* Formatando os subtílulos (h2) no conteúdo lateral */
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+footer#rodape {  /* Configurando o rodapé */
+    clear: both;  /* Para fazer com que o conteúdo seja mostrado fora da divisão tanto do section como do aside */
+    border-top: 1px solid #606060;  /*Para fazer uma linha na borda do footer, em cima dele */
+}
+
+footer#rodape p {
+    text-align: center;   /* Para centralizar os parágrafos do rodapé */
+}
